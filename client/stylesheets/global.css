@@ -32,6 +32,25 @@ ul.side-nav li {
 	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
+#products-feed .card-wrapper{
+	position: relative;
+	float: left;
+	margin: 10px;
+	height: 500px;
+	width: 300px;
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+	text-align: center;
+	color: #B3B3B3;
+  	font-size: .9em;
+  	line-height: 1.8em;
+}
+
+
+
+
+
 .template-select-brands .brand-img {
 	width: 100%;
 	height: 170px;

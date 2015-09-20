@@ -23,7 +23,7 @@
 				{{#each profiles}}
 				<div class="col-md-6 banner-bottom-grid">
 					<div class="col-md-5 banner-bottom-left">
-						<img src="{{profile.picture}}" alt="" />
+						<a href="{{pathFor 'feed'}}"><img src="{{profile.picture}}" alt="" /></a>
 					</div>
 					<div class="col-md-7 banner-bottom-right">
 						<h4>{{profile.name}}</h4>
@@ -99,12 +99,7 @@
 									<p>Lorem ipsum dolor sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien gravida consequat.</p>
 								</div>
 							</li>
-							<li>
-								<div class="banner-right-info">
-									<h3>Magna mulla at sit amet nibh malesuada posuere</h3>
-									<p>Dolor lorem ipsum sit amet consectetur adipiscing elit duis convallis erat est a euismod justo fringilla ut vestibulum a magna tempus sapien consequat gravida.</p>
-								</div>
-							</li>
+							
 						</ul>
 					</div>
 				</div>
