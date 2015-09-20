@@ -1,63 +1,38 @@
 Template.selectBrands.rendered = function() {
+	$('.brand-control').on('click', '.button-like', function() {
+		$(this).hide();
+		$(this).next().show();
+		// insert liked brands
+		// 		Brands.insert({
+		// 		  id: el.brand.id,
+		// 		  name: el.brand.name,
+		// 		  imageUrl: el.brand.umage_url
+		// 		});
+	});
 
-	//invoke the server method
-	if (Meteor.isClient) {
-	    Meteor.call("checkMailBrands", function(error, results) {
-	    	updateBrands(JSON.parse(results.content));
-	    });
-	    Meteor.call("checkFemailBrands", function(error, results) {
-	    	updateBrands(JSON.parse(results.content));
-	    });
-	}
+	$('.brand-control').on('click', '.button-unlike', function() {
+		$(this).hide();
+		$(this).prev().show();
+		// remove liked brands
+		// 		Brands.remove({
+		// 		  id: el.brand.id,
+		// 		  name: el.brand.name,
+		// 		  imageUrl: el.brand.umage_url
+		// 		});
+	});
 
-	window.asdfasdf = Brands.find().fetch();
-
-	function updateBrands(content) {
-		var items = content.items;
-		$('#brands-collection').html('');
-		for (var i = 0; i < items.length; i ++) {
-			var brand = new BrandView(items[i].brand);
-			$('#brands-collection').append(brand.init());
-		}
-	}
-
-	function BrandView(brand){
-		var el = this;
-		// console.log(brand);
-		this.brand = brand;
-		this.view = $('<div>' + 
-							'<div class="card-wrapper">' + 
-				    			'<div class="brand-img"></div>' +
-				    			'<p class="brand-name truncate"></p>' +
-				    			'<div class="brand-control">' +
-				    			'<span class="button-dislike"><i class="fa fa-times fa-lg"></i></span>' + 
-				    			'<span class="button-like"><i class="fa fa-heart fa-lg"></i></span>' +
-				    		'</div>' +
-				    	'</div>'+ 
-				    '</div>');
-
-		this.view.find('.button-like').click(function() {
-			Brands.insert({
-			  id: el.brand.id,
-			  name: el.brand.name,
-			  imageUrl: el.brand.umage_url
-			});
-			el.view.fadeOut();
-		});
-
-		this.view.find('.button-dislike').click(function() {
-			el.view.fadeOut();
-		});
-	}
-
-	BrandView.prototype = {
-		init : function () {
-			var el = this;
-			el.view.find('.brand-name').text(el.brand.name);
-			el.view.find('.brand-img').css('background-image', 'url("'+ el.brand.umage_url + '")');
-			return el.view
-		}
-	}
+	$('.button-dislike').click(function() {
+		$(this).parent().parent().parent().fadeOut();
+	});
 };
 
-
+Template.selectBrands.helpers({
+	brandsToShow: function() {
+		var gender = Meteor.user().services.facebook.gender;
+		if (gender === "female") {
+			return FemaleBrands.find().fetch();
+		} else {
+			return MaleBrands.find().fetch();
+		}
+	}
+})

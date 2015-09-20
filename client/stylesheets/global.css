@@ -67,44 +67,49 @@ ul.side-nav li {
 	text-align: center;
 }
 
-.template-select-brands .button-like, .template-select-brands .button-dislike {
+.template-select-brands .button-like, .template-select-brands .button-dislike, .template-select-brands .button-unlike {
 	font-size: 40px;
+}
+
+.template-select-brands .button-unlike {
+  color: red;
 }
 
 .template-select-brands .button-like {
 	color: green;
 }
 
-.template-select-brands .button-idslike {
+.template-select-brands .button-dislike {
 	color: orange;
 }
 
 #giveButton {
 	width: 200px;
 	height: 200px;
-/*	padding: 30px 50px 50px 10px;
-*/	text-align:center;
-    vertical-align:middle;
-    padding-top: 50px;
-    font-size: 30px;
-    line-height: 1.5em;
-    font-family: "HelveticaNeue-Light"
+  text-align:center;
+  vertical-align:middle;
+  padding-top: 50px;
+  font-size: 30px;
+  line-height: 1.5em;
+  font-family: "HelveticaNeue-Light"
 }
 
 #requestButton {
 	margin-left: 100px;
 	width: 200px;
 	height: 200px;
-/*	padding: 30px 50px 50px 10px;
-*/	text-align:center;
-    vertical-align:middle;
-    padding-top: 30px;
-    font-size: 30px;
-    line-height: 1.5em;
-    font-family: "HelveticaNeue-Light"
-
+  text-align:center;
+  vertical-align:middle;
+  padding-top: 30px;
+  font-size: 30px;
+  line-height: 1.5em;
+  font-family: "HelveticaNeue-Light"
 }
 
 .user-advise-black-text {
   color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.button-dislike {
+  margin-right: 30px;
 }
