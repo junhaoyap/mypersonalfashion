@@ -11,6 +11,13 @@ Template.feed.rendered = function() {
      });
   });
 
+  setInterval(function() {
+    if (Meteor.user()) {
+      $('#logged-in').css('display', 'block');
+      $('#logged-out').css('display', 'none');
+    }
+  }, 500);
+
   function updateProducts(products) {
     $('#products-feed').html('');
     for (var i = 0; i < products.length; i++) {
@@ -21,7 +28,7 @@ Template.feed.rendered = function() {
       var id = product.id;
       var shopUrl = product.shopUrl;
       var brandId = product.brand.key;
-      $('#products-feed').append('<div class="feed-item col-xs-12 col-sm-6 col-md-3">' +
+      $('#products-feed').append($('<div class="feed-item col-xs-12 col-sm-6 col-md-3">' +
                                    '<img class="image-center thumbnail" src="' + imageUrl  + '">' +
                                    '<p class="text-center brand-name truncate">' + name + '</p>' +
                                    '<p class="text-center">$' + price + '</p>' +
@@ -31,7 +38,7 @@ Template.feed.rendered = function() {
                                      '<a class="recommend-button btn btn-success" data-brand-id="' + brandId + '" data-shop-url="' + shopUrl + '" data-id="' + id + '" data-price="' + price + '" data-name="' + name + '" + data-image-url="' + imageUrl + '">Recommend</a>' +
                                      '<br>' +
                                    '</div>'+
-                                 '</div>');
+                                 '</div>'));
     }
     $('.recommend-button').click(function() {
       var that = this;

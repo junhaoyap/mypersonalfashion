@@ -1,9 +1,9 @@
 <template name="feed">
   {{> _header}}
   <div class="container">
-    {{#if currentUser}}
+    <div id="logged-in" style="display: none;">
       <div class="banner-bottom-info">
-      	<h3>{{userToShow.profile.name}}'s Personalized Feed</h3>
+        <h3>{{userToShow.profile.name}}'s Personalized Feed</h3>
       </div>
       <br>
       <div class="row">
@@ -14,7 +14,8 @@
         <p class="text-center"><b>{{userToShow.profile.name}}</b></p>
         <div id="products-feed"></div>
       </div>
-    {{else}}
+    </div>
+    <div id="logged-out">
       <div class="row">
         <img class="image-center thumbnail" src="{{userToShow.profile.picture}}">
         <p class="text-center"><b>{{userToShow.profile.name}}</b></p>
@@ -25,6 +26,6 @@
       <div class="text-center">
         {{> loginButtons}}
       </div>
-    {{/if}}
+    </div>
   </div>
 </template>
