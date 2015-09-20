@@ -27,11 +27,12 @@ Template.selectBrands.rendered = function() {
 		this.brand = brand;
 		this.view = $('<div>' + 
 							'<div class="card-wrapper">' + 
-				    			'<div class="brand-img"></div>' +
-				    			'<p class="brand-name truncate"></p>' +
+				    			'<div class="brand-img banner-bottom-info"></div>' +
+				    			'<div class="banner-bottom-info">' +
+				    			'<p class=" brand-name truncate"></p></div>' +
 				    			'<div class="brand-control">' +
-				    			'<span class="button-dislike"><i class="fa fa-times fa-lg"></i></span>' + 
-				    			'<span class="button-like"><i class="fa fa-heart fa-lg"></i></span>' +
+				    			'<span class="button-dislike"><i class="fa fa-times fa"></i></span>' + 
+				    			'<span class="button-like"><i class="fa fa-heart fa"></i></span>' +
 				    		'</div>' +
 				    	'</div>'+ 
 				    '</div>');

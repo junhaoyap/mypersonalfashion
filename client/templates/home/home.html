@@ -8,6 +8,39 @@
 	</div>
 	<!-- //header-top -->
 	<!-- banner -->
+	{{#if currentUser}}
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="text-center"> 
+			  <a href="{{ pathFor 'selectBrands' }}"><button type="button" class="btn btn-default" id="more">Request for advise</button></a>
+			</div>
+			<div class="banner-bottom-info">
+				<h3>Fashion advise 101</h3>
+				<p>Start giving fashion advise by selecting any profile below.</p>
+			</div>
+			<div class="banner-bottom-grids">
+				{{#each profiles}}
+				<div class="col-md-6 banner-bottom-grid">
+					<div class="col-md-5 banner-bottom-left">
+						<img src="{{profile.picture}}" alt="" />
+					</div>
+					<div class="col-md-7 banner-bottom-right">
+						<h4>{{profile.name}}</h4>
+						<p>Height: 5" <br/> Size: 00</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				 {{/each}}
+				<div class="clearfix"> </div>
+			</div>
+			
+		</div>
+		<!-- container -->
+	</div>
+	
+
+	{{else}}
 	<div class="banner">
 		<!-- container -->
 		<div class="container">
@@ -82,42 +115,10 @@
 	</div>	
 	<!-- banner -->
 	<!-- banner-bottom -->
-	<div class="banner-bottom">
-		<!-- container -->
-		<div class="container">
-			<div class="banner-bottom-info">
-				<h3>Fashion advise 101</h3>
-				<p>Start giving fashion advise by selecting any profile below.</p>
-			</div>
-			<div class="banner-bottom-grids">
-				<div class="col-md-6 banner-bottom-grid">
-					<div class="col-md-5 banner-bottom-left">
-						<img src="images/2.png" alt="" />
-					</div>
-					<div class="col-md-7 banner-bottom-right">
-						<h4>Phasellus nisi enim tempus sed mauris ut</h4>
-						<p>Height: 5" <br/> Size: 00</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-6 banner-bottom-grid">
-					<div class="col-md-5 banner-bottom-left">
-						<img src="images/3.png" alt="" />
-					</div>
-					<div class="col-md-7 banner-bottom-right">
-						<h4>Phasellus nisi enim tempus sed mauris ut</h4>
-						<p>Height: 5" <br/> Size: 00</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="text-center"> 
-			  <button type="button" class="btn btn-default" id="more">More</button>
-			</div>
-		</div>
-		<!-- container -->
-	</div>
+
+
+	
+	{{/if}}
 	<!-- //banner-bottom -->
 	<!-- destination -->
 	<div class="destination">
@@ -145,6 +146,7 @@
 		</div>
 		<!-- //container -->
 	</div>
+
 	<!-- //destination -->
 	
 	<!-- footer -->

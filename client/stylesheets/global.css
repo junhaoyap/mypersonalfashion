@@ -56,11 +56,14 @@ ul.side-nav li {
 }
 
 .template-select-brands .button-like {
-	color: green;
+	color: #E91E63;
+	margin-left: 20px;
+	font-size: 25px;
 }
 
-.template-select-brands .button-idslike {
-	color: orange;
+.template-select-brands .button-dislike {
+	color: black;
+	font-size: 25px;
 }
 
 #giveButton {
