@@ -1,4 +1,4 @@
-/*--A Design by W3layouts 
+/*--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -127,7 +127,7 @@ html, body{
 	-ms-border-radius: 30px;
 	-o-border-radius: 30px;
 	-moz-border-radius: 30px;
-}	
+}
 .banner-grids{
   margin-top: 4em;
   background: rgba(255, 255, 255, 0.48);
@@ -670,7 +670,7 @@ color: #FFF;
 .grid_4{
 	background:#fff;
 	padding:2em 0em 0em 0em;
-}  
+}
 .grid_5{
 	background:#fff;
 	padding:1em 0 2em 0;
@@ -1275,7 +1275,7 @@ span.menu {
 	.contact-form input[type="text"] {
 	  width: 30.9%;
 	}
-}	
+}
 @media (max-width: 640px) {
 	span.menu {
 	  display: block;
