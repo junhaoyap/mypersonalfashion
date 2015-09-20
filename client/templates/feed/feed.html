@@ -3,13 +3,16 @@
   <div class="container">
     {{#if currentUser}}
       <div class="banner-bottom-info">
-      	<h3>Your Personalized Feed</h3>
+      	<h3>{{userToShow.profile.name}}'s Personalized Feed</h3>
       </div>
+      <br>
       <div class="row">
+        <div class="text-center">
+          <img src="{{userToShow.profile.picture}}" class="image-center thumbnail">
+          <br>
+        </div>
+        <p class="text-center"><b>{{userToShow.profile.name}}</b></p>
         <div id="products-feed"></div>
-        <!-- Show items that were requested to be commented on -->
-        <!-- Comment Box -> I think you will look freaking awesome in this! -->
-        <!-- Submit Button -->
       </div>
     {{else}}
       <div class="row">
