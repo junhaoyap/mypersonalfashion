@@ -10,7 +10,7 @@ Router.route('/userProfile', {
   name: 'userProfile'
 });
 
-Router.route('suggestedItems/:_id', {
+Router.route('suggestedItems', {
   name: 'suggestedItems'
 });
 
@@ -18,7 +18,7 @@ Router.route('likedItems', {
   name: 'likedItems'
 });
 
-Router.route('recommendations/:_id', {
+Router.route('recommendations', {
   name:'recommendations'
 });
 

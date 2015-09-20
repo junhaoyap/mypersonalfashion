@@ -1,5 +1,10 @@
 Template.suggestedItems.rendered = function() {
-
+  $('#magic-facebook-button').click(function() {
+    // Insert liked items into database linked to current user's ID
+  });
+  $('#magic-done-button').click(function() {
+    window.location.href = "/recommendations/?_id=" + Meteor.userId();
+  });
 }
 
 Template.suggestedItems.helpers({
