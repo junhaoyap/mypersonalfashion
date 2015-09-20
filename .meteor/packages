@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-accounts-password
 alanning:roles
 zimme:iron-router-active
 cmather:handlebars-server@0.2.0
@@ -23,3 +22,5 @@ useraccounts:materialize
 aldeed:autoform
 aldeed:collection2
 gildaspk:autoform-materialize
+accounts-ui
+accounts-facebook
