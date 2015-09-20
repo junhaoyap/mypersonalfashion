@@ -1,6 +1,11 @@
 Template.selectBrands.rendered = function() {
+	$('.next-step-button').click(function() {
+		if (!$(this).hasClass('disabled')) {
+			window.location.href = $(this).attr('href');
+		}
+	});
 	$('.brand-control').on('click', '.button-like', function() {
-		$('.next-step-button').css('display', 'block');
+		$('.next-step-button').removeClass('disabled');
 		$(this).hide();
 		$(this).next().show();
 		var user_id = Meteor.userId();
