@@ -13,15 +13,12 @@ Template.feed.rendered = function() {
       var product = products[i];
       console.log(product);
       $('#products-feed').append('<div class="col-xs-12 col-sm-6 col-md-3">' +
-                                    '<div class="card-wrapper">' +
-                                      '<div class="brand-img" style="background-image: url(' + product.media.images[0].smallHdUrl + ');"></div>' +
-                                        '<p class="text-center brand-name truncate">' + product.name + '</p>' +
-                                        '<p class="text-center">' + product.price + '</p>' +
-                                        '<input type="text" class="comment-input">' +
-                                        '<a class="recommend-button btn btn-success">Recommend</a>'
-                                      '</div>' +
-                                    '</div>' +
-                                  '</div>'
+                                   '<div class="brand-img" style="background-image: url(' + product.media.images[0].smallHdUrl + ');"></div>' +
+                                   '<p class="text-center brand-name truncate">' + product.name + '</p>' +
+                                   '<p class="text-center">' + product.price + '</p>' +
+                                   '<input type="text" class="comment-input">' +
+                                   '<a class="recommend-button btn btn-success">Recommend</a>' +
+                                 '</div>');
     }
     $('.recommend-button').click(function() {
       var that = this;

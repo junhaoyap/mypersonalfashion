@@ -10,16 +10,14 @@ Template.recommendations.rendered = function() {
     for (var i = 0; i < products.length; i++) {
       var product = products[i];
       console.log(product);
-      $('#products-recommendations').append('<a href=' + product.url + '>' +
-                                              '<div class="col-xs-12 col-sm-6 col-md-3">' +
-                                                '<div class="card-wrapper">' +
-                                                  '<div class="brand-img" style="background-image: url(' + product.media.images[0].smallHdUrl + ');"></div>' +
-                                                    '<p class="text-center brand-name truncate">' + product.name + '</p>' +
-                                                    '<p class="text-center">' + product.price + '</p>' +
-                                                  '</div>' +
-                                                '</div>' +
-                                              '</div>' +
-                                            '</a>'
+      $('#products-recommendations').append('<div class="col-xs-12 col-sm-6 col-md-3">' +
+                                              '<a href="' + product.url + '"" target="_blank">' +
+                                                '<img class="image-center thumbnail" src="' + product.media.images[0].smallHdUrl  + '">' +
+                                                '<p class="text-center brand-name truncate">' + product.name + '</p>' +
+                                                '<p class="text-center">$' + product.price + '</p>' +
+                                              '</a>' +
+                                              '<p class="text-center">' + Us + ': <i>' + 'This sunglasses will definitely look good on you' + '!</i></p>' +
+                                            '</div>');
     }
   }
 }
