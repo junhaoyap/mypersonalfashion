@@ -1,0 +1,3 @@
+Template.userProfile.rendered = function() {
+
+};
