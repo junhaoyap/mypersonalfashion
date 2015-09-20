@@ -10,6 +10,18 @@ Router.route('/userProfile', {
   name: 'userProfile'
 });
 
+Router.route('suggestedItems/:_id', {
+  name: 'suggestedItems'
+});
+
+Router.route('likedItems', {
+  name: 'likedItems'
+});
+
+Router.route('recommendations/:_id', {
+  name:'recommendations'
+});
+
 
 Router.route('/items/new', {
   name: 'items.new'

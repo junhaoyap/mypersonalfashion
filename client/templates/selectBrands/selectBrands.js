@@ -1,5 +1,6 @@
 Template.selectBrands.rendered = function() {
 	$('.brand-control').on('click', '.button-like', function() {
+		$('.next-step-button').css('display', 'block');
 		$(this).hide();
 		$(this).next().show();
 		// insert liked brands
@@ -35,4 +36,4 @@ Template.selectBrands.helpers({
 			return MaleBrands.find().fetch();
 		}
 	}
-})
+});

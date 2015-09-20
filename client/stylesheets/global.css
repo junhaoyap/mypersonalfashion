@@ -113,3 +113,9 @@ ul.side-nav li {
 .button-dislike {
   margin-right: 30px;
 }
+
+.image-center {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

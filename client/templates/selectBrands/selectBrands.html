@@ -1,6 +1,7 @@
 <template name="selectBrands">
   <div class="template-select-brands">
     <h3 class="center">Pick brands you love</h3>
+    <p class="next-step-button center" style="display: none;"><a href="{{ pathFor 'suggestedItems' }}">Next Step</a></p>
     <div id="brands-collection">
       <div class="row">
         {{#each brandsToShow}}
@@ -18,5 +19,6 @@
         {{/each}}
       </div>
     </div>
+    <p class="next-step-button center" style="display: none;"><a href="#">Next Step</a></p>
   </div>
 </template>

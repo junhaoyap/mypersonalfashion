@@ -13,7 +13,6 @@ Template.home.rendered = function() {
 				var items = parsedData.items;
 				for (i = 0; i < items.length; i++) {
 					var item = items[i];
-					console.log(item);
 					MaleBrands.insert(item);
 				}
 		});
@@ -22,7 +21,6 @@ Template.home.rendered = function() {
 				var items = parsedData.items;
 				for (i = 0; i < items.length; i++) {
 					var item = items[i];
-					console.log(item);
 					FemaleBrands.insert(item);
 				}
 		});
