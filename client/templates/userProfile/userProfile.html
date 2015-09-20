@@ -1,10 +1,25 @@
 <template name="userProfile">
   <div class="template-userProfile">
-    <h1>Profiles</h1>
+    <h1></h1>
     <div style="text-align:center;">
-	    {{#each profiles}}
-	    	<p>This is {{profile.name}}</p>
-		{{/each}}
+      <div class="row">
+  	    {{#each profiles}}
+          <a href="#">
+            <div class="col s12 m6 l4">
+              <img src="{{profile.picture}}" class="responsive-img">
+              <div class="card">
+                <div class="card-content">
+                  <p class="user-advise-black-text"><b>{{profile.name}}</b></p>
+                  <br>
+                  <p class="user-advise-black-text">would like your input!</p>
+                  <br>
+                  <p class="user-advise-black-text">Tap here to give some fashion advice!</p>
+                </div>
+              </div>
+            </div>
+          </a>
+  		  {{/each}}
+      </div>
     </div>
   </div>
 </template>

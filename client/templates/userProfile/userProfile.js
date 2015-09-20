@@ -4,10 +4,7 @@ Template.userProfile.rendered = function() {
 
 Template.userProfile.helpers({
 	profiles: function() {
-	    var objects = Meteor.users.find({}).fetch();
-	    console.log(objects);
-	    console.log(objects[0]);
-
+	    var objects = Meteor.users.find({'profile.isWantAdvice': true}).fetch();
 	    return objects;
 	}
 });
