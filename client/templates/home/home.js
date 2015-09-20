@@ -1,5 +1,5 @@
 Template.home.rendered = function() {
-  $('#requestButton').click(function() {
+  $('#request-button').click(function() {
     if (Meteor.user()) {
 			Meteor.users.update({ _id: Meteor.userId() }, { $set: { 'profile.isWantAdvice': true }});
 		}
