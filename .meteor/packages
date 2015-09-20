@@ -26,3 +26,4 @@ accounts-facebook
 materialize:materialize@=0.97.0
 useraccounts:iron-routing
 autopublish
+insecure
