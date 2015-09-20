@@ -7,7 +7,7 @@ Template.selectBrands.rendered = function() {
 		Brands.insert({
 		  id: $(this).data("id"),
 		  name: $(this).data("name"),
-		  imageUrl: $(this).data("imageUrl"),
+		  imageUrl: $(this).data("image-url"),
 		  userId: user_id
 		});
 	});
@@ -17,10 +17,7 @@ Template.selectBrands.rendered = function() {
 		$(this).prev().show();
 		var user_id = Meteor.userId();
 		Brands.remove({
-		  id: $(this).data("id"),
-		  name: $(this).data("name"),
-		  imageUrl: $(this).data("imageUrl"),
-		  userId: user_id
+		  _id: $(this).data("id")
 		});
 	});
 
