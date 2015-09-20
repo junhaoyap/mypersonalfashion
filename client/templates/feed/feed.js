@@ -9,7 +9,7 @@ Template.feed.rendered = function() {
 
   function updateProducts(products) {
     $('#products-feed').html('');
-    for (var i = 0; i < products.length; i ++) {
+    for (var i = 0; i < products.length; i++) {
       var product = products[i];
       console.log(product);
       $('#products-feed').append('<div class="col-xs-12 col-sm-6 col-md-3">' +
@@ -17,18 +17,19 @@ Template.feed.rendered = function() {
                                       '<div class="brand-img" style="background-image: url(' + product.media.images[0].smallHdUrl + ');"></div>' +
                                         '<p class="text-center brand-name truncate">' + product.name + '</p>' +
                                         '<p class="text-center">' + product.price + '</p>' +
-                                        // Add optional textfield +
+                                        '<input type="text" class="comment-input">' +
                                         '<a class="recommend-button btn btn-success">Recommend</a>'
                                       '</div>' +
                                     '</div>' +
                                   '</div>'
     }
     $('.recommend-button').click(function() {
+      var that = this;
       $(this).addClass('disabled').addClass('btn-info').removeClass('btn-success');
       $(this).text('Recommended!');
       $.post('', {
-
-      }, function(result) {
+        'user_id': userId,
+        'comment': $(that).prev().text(),
 
       });
     });

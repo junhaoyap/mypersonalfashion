@@ -6,8 +6,8 @@ Template.recommendations.rendered = function() {
   });
 
   function updateProducts(products) {
-    $('#products-feed').html('');
-    for (var i = 0; i < products.length; i ++) {
+    $('#products-recommendations').html('');
+    for (var i = 0; i < products.length; i++) {
       var product = products[i];
       console.log(product);
       $('#products-recommendations').append('<a href=' + product.url + '>' +
