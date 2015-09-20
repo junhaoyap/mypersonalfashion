@@ -1,13 +1,16 @@
 <template name="home">
-{{#if currentUser}}
-	<div class="banner-bottom">
+	{{#if currentUser}}
+		{{> _header}}
 		<div class="container">
 			<div class="text-center">
-			  <a href="{{ pathFor 'selectBrands' }}"><button type="button" class="btn btn-default" id="more">Request for advise</button></a>
+				<a href="{{ pathFor 'selectBrands' }}"><button type="button" class="btn btn-success">Request for advise</button></a>
         {{> loginButtons}}
 			</div>
+			<br>
 			<div class="banner-bottom-info">
 				<h3>Fashion advise 101</h3>
+				<br>
+				<i>-OR-</i>
 				<p>Start giving fashion advise by selecting any profile below.</p>
 			</div>
 			<div class="banner-bottom-grids">
@@ -20,66 +23,63 @@
 						<h4>{{profile.name}}</h4>
 						<p>Height: 5" <br/> Size: 00</p>
 					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	{{else}}
+		<div class="banner">
+			<div class="container">
+				<div class="banner-grids">
+					<div class="banner-left">
+						<h1>
+							Fashion Advisor
+						</h1>
+						<p>Be A Fashion Advisor Anytime</p>
+					</div>
+					<div class="banner-right">
+						<div id="top" class="callbacks_container">
+							<ul class="rslides" id="slider3">
+								<li>
+									<div class="banner-right-info">
+										<h3>Get Fashion Advise, Give Fashion Advice</h3>
+	                  <br>
+	                  <br>
+										<p>Sometimes when it comes to buying fashion items, all we need is some advise from our friends. To start your personalized fashion journey, register with Facebook below.</p>
+	                  <br>
+	                  <br>
+	                  {{> loginButtons}}
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<div class="clearfix"> </div>
 				</div>
-				 {{/each}}
-				<div class="clearfix"> </div>
 			</div>
 		</div>
-	</div>
-{{else}}
-	<div class="banner">
-		<div class="container">
-			<div class="banner-grids">
-				<div class="banner-left">
-					<h1>
-						Fashion Advisor
-					</h1>
-					<p>Be A Fashion Advisor Anytime</p>
-				</div>
-				<div class="banner-right">
-					<div id="top" class="callbacks_container">
-						<ul class="rslides" id="slider3">
-							<li>
-								<div class="banner-right-info">
-									<h3>Get Fashion Advise, Give Fashion Advice</h3>
-                  <br>
-                  <br>
-									<p>Sometimes when it comes to buying fashion items, all we need is some advise from our friends. To start your personalized fashion journey, register with Facebook below.</p>
-                  <br>
-                  <br>
-                  {{> loginButtons}}
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-  <!-- <div class="destination">
-  	<div class="container">
-  		<div class="destination-info">
-  			<h3>Top Fashion Advisors</h3>
-  			<p>Send personal request to these top advisors to seek for fashion advisor.</p>
-  		</div>
-  		<div class="destination-grids">
-  			<div class="col-md-3 destination-grid">
-  				<img src="images/4.jpg" alt="" />
-  			</div>
-  			<div class="col-md-3 destination-grid">
-  				<img src="images/5.jpg" alt="" />
-  			</div>
-  			<div class="col-md-3 destination-grid">
-  				<img src="images/6.jpg" alt="" />
-  			</div>
-  			<div class="col-md-3 destination-grid">
-  				<img src="images/7.jpg" alt="" />
-  			</div>
-  			<div class="clearfix"> </div>
-  		</div>
-  	</div>
-  </div> -->
-{{/if}}
+	  <!-- <div class="destination">
+	  	<div class="container">
+	  		<div class="destination-info">
+	  			<h3>Top Fashion Advisors</h3>
+	  			<p>Send personal request to these top advisors to seek for fashion advisor.</p>
+	  		</div>
+	  		<div class="destination-grids">
+	  			<div class="col-md-3 destination-grid">
+	  				<img src="images/4.jpg" alt="" />
+	  			</div>
+	  			<div class="col-md-3 destination-grid">
+	  				<img src="images/5.jpg" alt="" />
+	  			</div>
+	  			<div class="col-md-3 destination-grid">
+	  				<img src="images/6.jpg" alt="" />
+	  			</div>
+	  			<div class="col-md-3 destination-grid">
+	  				<img src="images/7.jpg" alt="" />
+	  			</div>
+	  			<div class="clearfix"> </div>
+	  		</div>
+	  	</div>
+	  </div> -->
+	{{/if}}
 </template>
