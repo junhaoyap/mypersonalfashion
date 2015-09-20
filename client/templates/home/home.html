@@ -13,17 +13,17 @@
 				<i>-OR-</i>
 				<p>Start giving fashion advise by selecting any profile below.</p>
 			</div>
-			<div class="banner-bottom-grids">
+			<br>
+			<br>
+			<div class="row">
 				{{#each profiles}}
-				<div class="col-md-6 banner-bottom-grid">
-					<div class="col-md-5 banner-bottom-left">
-						<a href="{{pathFor 'feed'}}"><img src="{{profile.picture}}" alt="" /></a>
-					</div>
-					<div class="col-md-7 banner-bottom-right">
-						<h4>{{profile.name}}</h4>
-						<p>Height: 5" <br/> Size: 00</p>
-					</div>
-				</div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="{{profile.picture}}">
+							<br>
+							<p class="text-center">{{profile.name}}</p>
+				    </a>
+				  </div>
 				{{/each}}
 			</div>
 		</div>
