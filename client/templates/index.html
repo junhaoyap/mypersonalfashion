@@ -19,4 +19,17 @@
   <meta name="msapplication-TileColor" content="#27374a">
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png?v=1">
   <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="modernizr.custom.js"></script>
+  <!---- start-smoth-scrolling---->
+  <script type="text/javascript" src="move-top.js"></script>
+  <script type="text/javascript" src="easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){   
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+      });
+    });
+  </script>
 </head>

@@ -23,7 +23,7 @@ aldeed:collection2
 gildaspk:autoform-materialize
 accounts-ui
 accounts-facebook
-materialize:materialize@=0.97.0
 useraccounts:iron-routing
 autopublish
 insecure
+twbs:bootstrap
