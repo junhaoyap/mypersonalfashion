@@ -101,7 +101,12 @@ ul.side-nav li {
 }
 
 .template-select-brands .button-dislike {
+<<<<<<< HEAD
+	color: black;
+	font-size: 25px;
+=======
 	color: orange;
+>>>>>>> 041dfe6ff221eeee37e3b0d273968a4438b6dd99
 }
 
 #giveButton {

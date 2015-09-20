@@ -1,8 +1,5 @@
 <template name="selectBrands">
   <div class="template-select-brands">
-	 <div class="banner-bottom-info">
-    	<h3>Select Brands</h3>
-    </div>
     <h3 class="center">Pick brands you love</h3>
     <p class="next-step-button center" style="display: none;"><a href="{{ pathFor 'suggestedItems' }}">Next Step</a></p>
     <div id="brands-collection">
