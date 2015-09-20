@@ -1,16 +1,19 @@
 <template name="likedItems">
-  {{#if currentUser}}
-    <div class="row">
-      <img class="image-center" src="{{userToShow.profile.picture}}">
-      <p class="center">{{userToShow.profile.name}}</p>
-    </div>
-    <!-- Show items that were requested to be commented on -->
-    <!-- Tick a few items -->
-    <!-- Comment Box -> I think you will look freaking awesome in this! -->
-    <!-- Submit Button -->
-    <!-- Create recommendation tagged against user -->
-  {{else}}
-    <p class="center">In order to comment, please log in with Facebook</p>
-    {{> loginButtons}}
-  {{/if}}
+  {{> _header}}
+  <div class="container">
+    {{#if currentUser}}
+      <div class="row">
+        <img class="image-center thumbnail" src="{{userToShow.profile.picture}}">
+        <p class="text-center"><b>{{userToShow.profile.name}}</b></p>
+      </div>
+      <!-- Show items that were requested to be commented on -->
+      <!-- Tick a few items -->
+      <!-- Comment Box -> I think you will look freaking awesome in this! -->
+      <!-- Submit Button -->
+      <!-- Create recommendation tagged against user -->
+    {{else}}
+      <p class="text-center">In order to comment, please log in with Facebook</p>
+      {{> loginButtons}}
+    {{/if}}
+  </div>
 </template>
