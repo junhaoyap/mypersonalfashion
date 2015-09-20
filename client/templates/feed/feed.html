@@ -1,12 +1,27 @@
 <template name="feed">
   {{> _header}}
   <div class="container">
-    <div class="template-feed">
+    {{#if currentUser}}
       <div class="banner-bottom-info">
       	<h3>Your Personalized Feed</h3>
       </div>
+      <div class="row">
+        <div id="products-feed"></div>
+        <!-- Show items that were requested to be commented on -->
+        <!-- Comment Box -> I think you will look freaking awesome in this! -->
+        <!-- Submit Button -->
+      </div>
+    {{else}}
+      <div class="row">
+        <img class="image-center thumbnail" src="{{userToShow.profile.picture}}">
+        <p class="text-center"><b>{{userToShow.profile.name}}</b></p>
+      </div>
       <br>
-      <div id="products-feed"></div>
-    </div>
+      <p class="text-center">In order to advice your friend {{userToShow.profile.name}}, please log in with Facebook</p>
+      <br>
+      <div class="text-center">
+        {{> loginButtons}}
+      </div>
+    {{/if}}
   </div>
 </template>

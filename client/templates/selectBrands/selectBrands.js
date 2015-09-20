@@ -6,6 +6,7 @@ Template.selectBrands.rendered = function() {
 	});
 	$('.brand-control').on('click', '.button-like', function() {
 		$('.next-step-button').removeClass('disabled');
+		$('.facebook-share-button').removeClass('disabled');
 		var that = this;
 		$(this).hide();
 		$(this).next().show();
