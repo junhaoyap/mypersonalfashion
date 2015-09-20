@@ -45,7 +45,7 @@ Template.feed.rendered = function() {
         'imageUrl': $(that).data('image-url'),
         'comment': comment,
         'zalando_id': $(that).data('id'),
-        'shop_url': $(that).data('shop-url'),
+        'storeUrl': $(that).data('shop-url'),
         'price': $(that).data('price')
       });
     });
