@@ -1,5 +1,6 @@
 <template name="home">
   <div class="template-home">
+<<<<<<< HEAD
   	<!-- header-top -->
 	<div class="header-top">
 		<!-- container -->
@@ -150,7 +151,15 @@
     <!-- <h1>Welcome to Project Title</h1>
     <div style="text-align:center;">
       <a id="giveButton" class="btn-floating btn-large waves-effect waves-light btn blue lighten-2" href="{{ pathFor 'userProfile' }}">GIVE <br/>ADVISE</a>
+      <a id="requestButton" class="btn-floating btn-large waves-effect waves-light btn blue lighten-2" href="{{ pathFor 'selectBrands' }}">REQUEST <br/>FOR <br/>ADVISE</a> -->
+<!--     </div>
+ -->  </div>
+=======
+    {{#if currentUser}}
+    {{else}}
+      <a id="giveButton" class="btn-floating btn-large waves-effect waves-light btn blue lighten-2" href="{{ pathFor 'userProfile' }}">GIVE <br/>ADVISE</a>
       <a id="requestButton" class="btn-floating btn-large waves-effect waves-light btn blue lighten-2" href="{{ pathFor 'dashboard' }}">REQUEST <br/>FOR <br/>ADVISE</a>
     {{/if}}
   </div>
+>>>>>>> 580aa75efef4dbf2e9c93b2acbe8a91191ecfe42
 </template>

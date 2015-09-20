@@ -1,5 +1,6 @@
 Template.selectBrands.rendered = function() {
 
+
 	//invoke the server method
 	if (Meteor.isClient) {
 	    Meteor.call("checkMailBrands", function(error, results) {
@@ -23,7 +24,6 @@ Template.selectBrands.rendered = function() {
 
 	function BrandView(brand){
 		var el = this;
-		// console.log(brand);
 		this.brand = brand;
 		this.view = $('<div>' + 
 							'<div class="card-wrapper">' + 
@@ -38,10 +38,12 @@ Template.selectBrands.rendered = function() {
 				    '</div>');
 
 		this.view.find('.button-like').click(function() {
+			var user_id = Meteor.userId();
 			Brands.insert({
 			  id: el.brand.id,
 			  name: el.brand.name,
-			  imageUrl: el.brand.umage_url
+			  imageUrl: el.brand.umage_url,
+			  userId: user_id
 			});
 			el.view.fadeOut();
 		});

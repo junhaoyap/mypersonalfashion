@@ -6,6 +6,22 @@ nav {
   margin-bottom: 24px;
 }
 
+.nav-wrapper {
+  background-color: white;
+}
+
+nav .brand-logo {
+  color: black;
+}
+
+nav i {
+  color: black;
+}
+
+.login-display-name {
+  display: none !important;
+}
+
 ul.side-nav li a {
   line-height: 44px;
   padding: 24px;
