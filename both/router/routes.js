@@ -10,10 +10,6 @@ Router.route('/userProfile', {
   name: 'userProfile'
 });
 
-Router.route('suggestedItems', {
-  name: 'suggestedItems'
-});
-
 Router.route('likedItems', {
   name: 'likedItems'
 });
