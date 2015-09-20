@@ -12,8 +12,16 @@
       <!-- Submit Button -->
       <!-- Create recommendation tagged against user -->
     {{else}}
-      <p class="text-center">In order to comment, please log in with Facebook</p>
-      {{> loginButtons}}
+      <div class="row">
+        <img class="image-center thumbnail" src="{{userToShow.profile.picture}}">
+        <p class="text-center"><b>{{userToShow.profile.name}}</b></p>
+      </div>
+      <br>
+      <p class="text-center">In order to advice your friend {{userToShow.profile.name}}, please log in with Facebook</p>
+      <br>
+      <div class="text-center">
+        {{> loginButtons}}
+      </div>
     {{/if}}
   </div>
 </template>

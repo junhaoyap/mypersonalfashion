@@ -1,11 +1,16 @@
 <template name="recommendations">
-  <h3 class="center">Here are your recommendations</h3>
-  <div class="row">
-    <img class="image-center" src="{{currentUser.profile.picture}}">
-    <p class="center">{{currentUser.profile.name}}</p>
+  {{> _header}}
+  <div class="container">
+    <div class="banner-bottom-info">
+      <h3>Here are the recommendations from your friends</h3>
+    </div>
+    <div class="row">
+      <img class="image-center thumbnail" src="{{currentUser.profile.picture}}">
+      <p class="text-center">You</p>
+    </div>
   </div>
   <!-- Show items that were part of recommendations -->
   <!-- Show the comment that the friend gave -->
   <!-- Tap on item to go to the shop url and purchase -->
-  <!-- Recommendation sucks? Tap on delete to remove the recommendation from friend y -->
+  <!-- Recommendation sucks? Tap on delete to remove the recommendation temporarily-->
 </template>
