@@ -3,23 +3,25 @@ Template.selectBrands.rendered = function() {
 		$('.next-step-button').css('display', 'block');
 		$(this).hide();
 		$(this).next().show();
-		// insert liked brands
-		// 		Brands.insert({
-		// 		  id: el.brand.id,
-		// 		  name: el.brand.name,
-		// 		  imageUrl: el.brand.umage_url
-		// 		});
+		var user_id = Meteor.userId();
+		Brands.insert({
+		  id: $(this).data("id"),
+		  name: $(this).data("name"),
+		  imageUrl: $(this).data("imageUrl"),
+		  userId: user_id
+		});
 	});
 
 	$('.brand-control').on('click', '.button-unlike', function() {
 		$(this).hide();
 		$(this).prev().show();
-		// remove liked brands
-		// 		Brands.remove({
-		// 		  id: el.brand.id,
-		// 		  name: el.brand.name,
-		// 		  imageUrl: el.brand.umage_url
-		// 		});
+		var user_id = Meteor.userId();
+		Brands.remove({
+		  id: $(this).data("id"),
+		  name: $(this).data("name"),
+		  imageUrl: $(this).data("imageUrl"),
+		  userId: user_id
+		});
 	});
 
 	$('.button-dislike').click(function() {

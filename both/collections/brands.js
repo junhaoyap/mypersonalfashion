@@ -4,6 +4,9 @@ Brands.attachSchema(new SimpleSchema({
   id: { 
   	type: String
   },
+  userId: {
+    type: String
+  },
   name: { 
   	type: String
   },
