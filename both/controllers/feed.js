@@ -1,0 +1,4 @@
+FeedController = AppController.extend({
+  data: {
+  }
+});

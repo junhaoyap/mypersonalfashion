@@ -14,6 +14,10 @@ Router.route('/selectbrands', {
   name: 'selectBrands'
 });
 
+Router.route('/feed', {
+  name: 'feed'
+});
+
 Router.plugin('ensureSignedIn', {
   only: ['dashboard']
 });
