@@ -1,8 +1,8 @@
 <template name="likedItems">
   {{#if currentUser}}
     <div class="row">
-      <img class="image-center" src="{{currentUser.profile.picture}}">
-      <p class="center">{{currentUser.profile.name}}</p>
+      <img class="image-center" src="{{userToShow.profile.picture}}">
+      <p class="center">{{userToShow.profile.name}}</p>
     </div>
     <!-- Show items that were requested to be commented on -->
     <!-- Tick a few items -->
