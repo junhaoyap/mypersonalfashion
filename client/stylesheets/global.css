@@ -140,3 +140,8 @@ ul.side-nav li {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+.recommend-button {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}

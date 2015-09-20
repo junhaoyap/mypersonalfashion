@@ -12,13 +12,25 @@ Template.feed.rendered = function() {
     for (var i = 0; i < products.length; i++) {
       var product = products[i];
       console.log(product);
-      $('#products-feed').append('<div class="col-xs-12 col-sm-6 col-md-3">' +
-                                   '<div class="brand-img" style="background-image: url(' + product.media.images[0].smallHdUrl + ');"></div>' +
+      $('#products-feed').append('<div class="feed-item col-xs-12 col-sm-6 col-md-3">' +
+                                   '<img class="image-center thumbnail" src="' + product.media.images[0].smallHdUrl  + '">' +
                                    '<p class="text-center brand-name truncate">' + product.name + '</p>' +
-                                   '<p class="text-center">' + product.price + '</p>' +
-                                   '<input type="text" class="comment-input">' +
-                                   '<a class="recommend-button btn btn-success">Recommend</a>' +
+                                   '<p class="text-center">$' + product.units[0].price.value + '</p>' +
+                                   '<div class="text-center">' +
+                                     '<input type="text" class="comment-input">' +
+                                     '<br>' +
+                                     '<a class="recommend-button btn btn-success">Recommend</a>' +
+                                     '<br>' +
+                                   '</div>'+
                                  '</div>');
+                                //  '<div class="col-xs-12 col-sm-6 col-md-3">' +
+                                //    '<a href="' + product.url + '"" target="_blank">' +
+                                //      '<img class="image-center thumbnail" src="' + product.media.images[0].smallHdUrl  + '">' +
+                                //      '<p class="text-center brand-name truncate">' + product.name + '</p>' +
+                                //      '<p class="text-center">$' + product.price + '</p>' +
+                                //    '</a>' +
+                                //    '<p class="text-center">' + Us + ': <i>' + 'This sunglasses will definitely look good on you' + '!</i></p>' +
+                                //  '</div>'
     }
     $('.recommend-button').click(function() {
       var that = this;
