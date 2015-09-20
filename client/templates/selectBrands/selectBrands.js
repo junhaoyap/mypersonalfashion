@@ -6,24 +6,21 @@ Template.selectBrands.rendered = function() {
 	});
 	$('.brand-control').on('click', '.button-like', function() {
 		$('.next-step-button').removeClass('disabled');
+		var that = this;
 		$(this).hide();
 		$(this).next().show();
 		var user_id = Meteor.userId();
-		Brands.insert({
-		  id: $(this).data("id"),
-		  name: $(this).data("name"),
-		  imageUrl: $(this).data("image-url"),
-		  userId: user_id
+		$.post('http://37cee33b.ngrok.com/brands/add', {
+			'zalando_id': $(that).data('id'),
+			'name': $(that).data('name'),
+			'imageUrl': $(that).data('image-url'),
+			'userId': user_id
 		});
 	});
 
 	$('.brand-control').on('click', '.button-unlike', function() {
 		$(this).hide();
 		$(this).prev().show();
-		var user_id = Meteor.userId();
-		Brands.remove({
-		  _id: $(this).data("id")
-		});
 	});
 
 	$('.button-dislike').click(function() {
