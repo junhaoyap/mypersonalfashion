@@ -2,6 +2,7 @@ Template.feed.rendered = function() {
   var userId = Router.current().params.query._id;
   $.post('http://37cee33b.ngrok.com/brands/unreviewed', {user_id: userId}, function(result) {
     var brandId = result.brand_id;
+    console.log(brandId);
     if (typeof brandId === "undefined") {
       brandId = "GA3";
     }
@@ -14,12 +15,12 @@ Template.feed.rendered = function() {
     $('#products-feed').html('');
     for (var i = 0; i < products.length; i++) {
       var product = products[i];
-      console.log(product);
       var name = product.name;
       var imageUrl = product.media.images[0].smallHdUrl;
       var price = product.units[0].price.value;
       var id = product.id;
       var shopUrl = product.shopUrl;
+      var brandId = product.brand.key;
       $('#products-feed').append('<div class="feed-item col-xs-12 col-sm-6 col-md-3">' +
                                    '<img class="image-center thumbnail" src="' + imageUrl  + '">' +
                                    '<p class="text-center brand-name truncate">' + name + '</p>' +
@@ -27,7 +28,7 @@ Template.feed.rendered = function() {
                                    '<div class="text-center">' +
                                      '<input type="text" class="comment-input">' +
                                      '<br>' +
-                                     '<a class="recommend-button btn btn-success" data-shop-url="' + shopUrl + '" data-id="' + id + '" data-price="' + price + '" data-name="' + name + '" + data-image-url="' + imageUrl + '">Recommend</a>' +
+                                     '<a class="recommend-button btn btn-success" data-brand-id="' + brandId + '" data-shop-url="' + shopUrl + '" data-id="' + id + '" data-price="' + price + '" data-name="' + name + '" + data-image-url="' + imageUrl + '">Recommend</a>' +
                                      '<br>' +
                                    '</div>'+
                                  '</div>');
@@ -46,7 +47,8 @@ Template.feed.rendered = function() {
         'comment': comment,
         'zalando_id': $(that).data('id'),
         'storeUrl': $(that).data('shop-url'),
-        'price': $(that).data('price')
+        'price': $(that).data('price'),
+        'brand_id': $(that).data('brand-id')
       });
     });
   }
